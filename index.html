@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>TPF Checkout</title>
+  <!-- CSS  -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!-- Materialize CDN -->
+  <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection" />
+  <!-- Style Sheet -->
+  <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection" />
+  <!-- Moment.js CDN-->
+  <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+</head>
+
+<!-- User sign in navigation. -->
+<body>
+  <nav class="white" role="navigation">
+    <div class="nav-wrapper container">
+      <a id="logo-container" href="#" class="brand-logo">TPF-Checkout</a>
+      <div class="dropdown">
+        <ul class="right hide-on-med-and-down" id="dropdown-menu">
+          <li><a class="account-info no-mobile " onclick="noUserSignedIn()" href="#" value="0">Login</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Floating menu navigation button. -->
+  <div class="fixed-action-btn">
+    <a class="btn-floating btn-large blue lighten-1">
+      <i class="large material-icons">reorder</i>
+    </a>
+    <ul>
+      <li>
+        <a href="#key-section" class="btn-floating purple lighten-4 key-item">
+        <img class="key nav-button" src= "assets/images/key.png">
+        </a>
+      </li>
+      <li>
+        <a href="#vacuum-section" class="btn-floating red lighten-4 vacuum-item">
+          <img class="vacuum nav-button" src= "assets/images/vacuum.png">
+        </a>
+      </li>
+      <li>
+        <a href="#ladder-section" class="btn-floating cyan lighten-4 ladder-item">
+          <img class="ladder nav-button" src= "assets/images/ladder.png">
+        </a>
+      </li>
+    </ul>
+    <a class="scrollToTop btn-floating btn-large purple lighten-1">
+      <i class="large material-icons">arrow_upward</i>
+    </a>
+  </div>
+
+  <!-- Sign-in pop-up -->
+  <div class="container" id="user-sign-in">
+    <div class="modal-content">
+      <div class="row">
+        <div class="col s12">
+          <button class="btn-small right no-signin" id="top-exit-btn" type="submit" name="action" style="display: none">X</button>
+          <h4 class="center">Sign in in order to checkout items.</h4>
+        </div>
+      </div>
+      <div class="row userSignIn">
+
+        <div id="login-btns">
+          <div class="row" style="margin-bottom: 20px;">
+            <div class="col s12">
+              <div class="center">
+                <button id="first-sign-in" class="btn-large waves-effect waves-light blue lighten-1" type="submit" name="action">Log In
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="row" style="margin-bottom: 0px;">
+            <div class="col s12">
+              <div class="center">
+                <button id="cancel-sign-in" class="btn-small no-signin" type="submit" name="action">Continue Without Signing In
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col s12" id="current-user" style="display: none">
+          <span>Log In</span>
+
+          <form class="existing-user">
+            <label for="email">Email</label>
+            <input placeholder="Email" id="email" type="email" class="validate">
+            <label for="password">Password</label>
+            <input placeholder="Password" id="password" type="password" class="validate">
+            <br>
+            <div class="center">
+              <button class="btn waves-effect waves-light blue lighten-1" id="sign-in" type="submit" name="action">Log In
+              </button>
+            </div>
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- Begin main section. -->
+  <div id="main-section">
+    <div id="index-banner" class="parallax-container">
+      <div class="section no-pad-bot">
+        <div class="container">
+          <br><br>
+          <h1 class="header center">What item do you need?</h1>
+          <br><br>
+          <div class="row center">
+            <div class="col s12">
+              <div class="icon-wrapper">
+                <div class="main-icon">
+                    <a href="#key-section" class="btn-floating purple lighten-4 key-item checkout-icon">
+                      <img class="key nav-button" src= "assets/images/key.png">
+                    </a>
+                </div>
+                <div class="main-icon">
+                    <a href="#vacuum-section" class="btn-floating red lighten-4 vacuum-item checkout-icon">
+                      <img class="vacuum nav-button" src= "assets/images/vacuum.png">
+                    </a>
+                </div>
+                <div class="main-icon">
+                    <a href="#ladder-section" class="btn-floating cyan lighten-4 ladder-item checkout-icon">
+                      <img class="ladder nav-button" src= "assets/images/ladder.png">
+                    </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="parallax"><img class="background" src="assets/images/purple-pattern.jpg" alt="white-background"></div>
+    </div>
+
+    <div id="divider" class="container">
+      <div class="section">
+        <div class="row">
+          <div class="col s12 center">
+            <h3><i class="mdi-content-send brown-text"></i></h3>
+            <h4>??</h4>
+            <!-- Policies? -->
+            <div>
+
+            </div>
+            <!-- Policies? -->
+
+            <p class="left-align light initialInfo"><br></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <!-- Begin Keys Section -->
+
+    <div class="parallax-container valign-wrapper" id="photoSection">
+      <div class="section no-pad-bot">
+        <div class="container">
+          <div class="row center">
+            <h5 class="header col s12 light">
+              <img class="icon-section key" src= "assets/images/key.png">
+            </h5>
+          </div>
+        </div>
+      </div>
+      <div class="parallax"><img class="background" src="assets/images/purple-pattern.jpg" alt="purple-background"></div>
+    </div>
+
+    <div id="key-section" class="container">
+      <div class="section">
+
+        <div class="row">
+          <div class="col s12 center">
+            <h3><i class="mdi-content-send brown-text"></i></h3>
+            <h4>Keys</h4>
+            <!-- Key Data -->
+            <div class="row" id="key-display">
+              <div class="col s4">
+                <ul>
+                  <li>1.</li>
+                  <li>2.</li>
+                  <li>3.</li>
+                </ul>
+              </div>
+              <div class="col s4">
+                <ul>
+                  <li>4.</li>
+                  <li>5.</li>
+                  <li>6.</li>
+                </ul>
+              </div>
+              <div class="col s4">
+                <ul>
+                  <li>7.</li>
+                  <li>8.</li>
+                  <li>9.</li>
+                </ul>
+              </div>
+            </div>
+            <!-- Key Data -->
+
+            <p class="left-align light initialInfo"><br></p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Begin Vacuums section. -->
+
+    <div class="parallax-container valign-wrapper" id="photoSection">
+        <div class="section no-pad-bot">
+          <div class="container">
+            <div class="row center">
+              <h5 class="header col s12 light">
+                  <img class="icon-section vacuum" src= "assets/images/vacuum.png">
+              </h5>
+            </div>
+          </div>
+        </div>
+        <div class="parallax"><img src="assets/images/purple-pattern.jpg" alt="purple-background"></div>
+      </div>
+  
+      <div id="vacuum-section" class="container">
+        <div class="section">
+  
+          <div class="row">
+            <div class="col s12 center">
+              <h3><i class="mdi-content-send brown-text"></i></h3>
+              <h4>Vacuums</h4>
+              <!-- Vacuum Data -->
+              <div class="row">
+                  <div class="col s4">
+                    <ul>
+                      <li>1.</li>
+                      <li>2.</li>
+                      <li>3.</li>
+                    </ul>
+                  </div>
+                  <div class="col s4">
+                    <ul>
+                      <li>4.</li>
+                      <li>5.</li>
+                      <li>6.</li>
+                    </ul>
+                  </div>
+                  <div class="col s4">
+                    <ul>
+                      <li>7.</li>
+                      <li>8.</li>
+                      <li>9.</li>
+                    </ul>
+                  </div>
+              </div>
+              <!-- Vacuum Data -->
+              <p class="left-align light initialInfo">
+  
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+      
+
+
+    <!-- Begin Ladders Section -->
+
+    <div class="parallax-container valign-wrapper" id="photoSection">
+      <div class="section no-pad-bot">
+        <div class="container">
+          <div class="row center">
+            <h5 class="header col s12 light"> 
+              <img class="icon-section ladder" src= "assets/images/ladder.png">            
+            </h5>
+          </div>
+        </div>
+      </div>
+      <div class="parallax"><img src="assets/images/purple-pattern.jpg" alt=""></div>
+    </div>
+
+    <div id="ladder-section" class="container">
+      <div class="section">
+
+        <div class="row">
+          <div class="col s12 center">
+            <h3><i class="mdi-content-send brown-text"></i></h3>
+            <h4>Ladders</h4>
+            <!-- Ladder Data -->
+            <div class="row">
+              <div class="col s6">
+                <ul>
+                  <li>1.</li>
+                  <li>2.</li>
+                  <li>3.</li>
+                </ul>
+              </div>
+            </div>
+            <!-- Ladder Data -->
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+  <!--footer begins. -->
+  <footer class="page-footer ">
+    <div class="col s12 m12 l12">
+      <div class="footer-copyright grey darken-2">
+        <div class="container center">
+            <i class="material-icons">favorite</i>
+            Made with love for all Purple Figs. 2019
+            <i class="material-icons">favorite</i>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!--  Scripts-->
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="js/materialize.js"></script>
+  <script src="js/init.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/sql.js"></script>
+  <script src="js/key-display.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,264 @@
+/* Custom Stylesheet */
+/**
+ * Use this file to override Materialize files so you can update
+ * the core Materialize files in the future
+ *
+ * Made By MaterializeCSS.com
+ */
+
+.icon-wrapper {
+  height: 100%;
+  width: 100%;
+  padding-top: 20px !important;
+  display: inline-block;
+}
+
+.checkout-icon {
+  height: 120px !important;
+  width: 120px;
+  padding: 15px;
+}
+.main-icon {
+  display: inline;
+  padding: 20px;
+}
+
+.icon-section {
+  max-height: 130px;
+  width: auto;
+}
+
+
+.nav-button {
+  padding: 10px;
+  height: 100%;
+}
+
+nav ul a,
+nav .brand-logo {
+  color: black;
+}
+
+p {
+  line-height: 2rem;
+}
+
+.sidenav-trigger {
+  color: black;
+}
+
+.parallax-container {
+  min-height: 420px;
+  line-height: 0;
+  height: auto;
+}
+.parallax-container .section {
+  width: 100%;
+}
+
+#photoSection {
+  min-height: 220px;
+}
+
+
+@media only screen and (max-width : 992px) {
+  .parallax-container .section {
+    position: absolute;
+    top: 10%;
+  }
+  #index-banner .section {
+    top: 10%;
+  }
+}
+
+@media screen and (max-width : 600px) {
+  #index-banner .section {
+    top: 0;
+  }
+  div#user-sign-in.container{
+    position: fixed;
+    left: 0;
+    right: 0;
+    background-color: rgba(87, 85, 85, 0.678);
+    padding: 10px;
+    max-height: 100%;
+    max-width: 90%;
+    width: 90%;
+    margin: auto;
+    margin-top: 10px;
+    overflow-y: auto;
+    border-radius: 3px;
+    will-change: top, opacity;
+    z-index: 20;
+    box-shadow: 0 0 0 0.2rem rgba(255, 255, 255, 0.541);
+    color: white;
+ }
+
+ .main-icon {
+  padding: 2px;
+}
+
+
+ .checkout-icon {
+    max-height: 80px;
+    max-width: 80px
+  }
+
+  nav .nav-wrapper {
+    position: unset;
+  }
+
+  nav .brand-logo {
+    font-size: 1.8rem;
+  }
+
+  #user-sign-in h4{
+    font-size: 1.5rem;
+  }
+
+  button#first-sign-in, button#first-sign-in-new {
+    margin: 0 auto;
+    border-radius: 3px;
+  }
+  .parallax-container .section {
+    position: absolute;
+    top: 10%;
+  }
+}
+
+#gasSection, #foodSection, #activitiesSection, #favoritesSection {
+  margin-top: 20px;
+  margin-bottom: 50px;
+}
+
+
+footer.page-footer {
+  margin: 0;
+  background-color: unset;
+}
+
+h4.close-text.center {
+    margin: 2.42rem 0 0.912rem 0;
+    line-height: 7vh;
+}
+
+#user-sign-in{
+  position: fixed;
+  left: 0;
+  right: 0;
+  background-color: rgba(87, 85, 85, 0.678);
+  padding: 10px;
+  max-height: 100%;
+  max-width: 50%;
+  width: fit-content;
+  margin: auto;
+  margin-top: 10px;
+  overflow-y: auto;
+  border-radius: 3px;
+  will-change: top, opacity;
+  z-index: 20;
+  box-shadow: 0 0 0 .2rem rgba(255, 255, 255, 0.541);
+  color: white;
+}
+
+.blur-effect {
+/* Blur and de-color */
+-webkit-filter: blur(5px) grayscale(50%);
+-moz-filter: blur(5px) grayscale(50%);
+-ms-filter: blur(5px) grayscale(50%);
+-o-filter: blur(5px) grayscale(50%);
+filter: blur(5px) grayscale(50%);
+
+}
+
+#cancel-sign-in {
+  border: none;
+  background: none;
+  border-bottom: .5px solid white;
+}
+
+#top-exit-btn {
+  webkit-box-shadow: none;
+  box-shadow: none;
+  border: none;
+  background: none;
+  margin: 5px;
+  font-size: 20px;
+  font-weight: bold;
+}
+ 
+.heart-icon {
+  font-size: 3em;
+}
+
+#favoriteBtn {
+  top: 10px !important;
+  right: 11px !important;
+}
+
+#ratingBadge {
+  margin-right: -1px !important;
+  border-radius: 2px !important;
+  color: white;
+  font-weight: 600;
+  top: -40px !important;
+  right: 11px;
+  position: relative;
+  line-height: 29px;
+  height: 30px;
+}
+
+.fav-btn.btn-floating.halfway-fab{
+  top: 18px;
+  right: 18px;
+}
+
+a.btn-floating.halfway-fab.rmv-btn{
+  top: 18px;
+  right: 18px;
+}
+
+.btn-small.rating-btn{
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+
+
+.scrollToTop{
+    text-decoration: none;
+    position: fixed;
+    bottom: 22px;
+    left: 4px;
+    display:none;
+}
+
+#log-out-success {
+  position: fixed;
+  left: 0;
+  right: 0;
+  background-color: rgba(87, 85, 85, 0.678);
+  padding: 10px;
+  max-height: 100%;
+  max-width: 50%;
+  width: fit-content;
+  margin: auto;
+  margin-top: 10px;
+  overflow-y: auto;
+  border-radius: 3px;
+  will-change: top, opacity;
+  z-index: 20;
+  border: .5px black;
+  box-shadow: 0 0 0 .2rem rgba(255, 255, 255, 0.541);
+  color: white;
+}
+
+.bioText {
+  margin-top: -5px;
+  font-size: 12px;
+}
+
+
+button#first-sign-in, button#first-sign-in-new {
+  margin:0 auto;
+}
