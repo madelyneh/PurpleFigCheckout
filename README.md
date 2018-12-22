@@ -14,14 +14,7 @@
 
 ## Problems Addressed
 
-<a name="easy"></a>
-## Easy as 1, 2, 3
-* Tell us where you're going.
-* We'll give you the best recommendations.
-* Save your favorites.
 
-
-<a name="technologies"></a>
 ## Technologies
 
  - JavaScript
