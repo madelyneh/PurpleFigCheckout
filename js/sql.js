@@ -1,5 +1,6 @@
 let mysql = require('mysql');
-let keyDisplay = require('./key-display');
+let http = require('http');
+// let keyDisplay = require('./key-display');
 
 var connection = mysql.createConnection({
   host: "localhost",
@@ -18,17 +19,20 @@ connection.connect(function(err) {
 
 let database = {
 
+  write: function() {
+
+  },
+
   read: function() {
     console.log("Selecting all products...\n");
     connection.query(`SELECT * FROM item_keys`, function(error, response) {
       if (error) throw error;
       // Log all results of the SELECT statement
-    // console.log(response);
+    console.log(response);
 
     let newKey = new keyDisplay("key", response);
-    // console.log(newKey);
+    console.log(newKey);
     connection.end()
     });
   },
-
 };

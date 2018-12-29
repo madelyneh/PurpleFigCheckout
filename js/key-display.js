@@ -1,7 +1,7 @@
-let keySection = $('#key-display');
+let keySection = document.getElementById("#key-display");
 
 
-keyDisplay = function(type, value) {
+let keyDisplay = function(type, value) {
   this.type = type;
   this.value = value;
 
@@ -13,12 +13,10 @@ keyDisplay = function(type, value) {
 
       let display = (keyNumber + ": " + keyName + " - in/out: " + checkedOut + "\n")
 
-      $('#key-display').append(display);
+      keySection.append(display);
     // console.log(display);    
     }
     
-  
 }
 
 
-module.exports = keyDisplay;
