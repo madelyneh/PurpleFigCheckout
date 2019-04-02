@@ -33,31 +33,23 @@ $(window).scroll(function(){
 
 
 //smooth scrolling effect for each section
-//gas button scroll effect
-$("#gas-action-btn").click(function() {
+$("#key-section-btn").click(function() {
     $('html, body').animate({
-        scrollTop: $("#gasSection").offset().top
+        scrollTop: $("#key-section").offset().top
     }, 800);
 });
 //food button scroll effect
-$("#food-action-btn").click(function() {
+$("#vacuum-section-btn").click(function() {
     $('html, body').animate({
-        scrollTop: $("#foodSection").offset().top
+        scrollTop: $("#vacuum-section").offset().top
     }, 800);
 });
 // activities button scroll effect
-$("#activities-action-btn").click(function() {
+$("#ladder-section-btn").click(function() {
     $('html, body').animate({
-        scrollTop: $("#activitiesSection").offset().top
+        scrollTop: $("#ladder-section").offset().top
     }, 800);
 });
-// fav button scroll effect
-$("#fav-action-btn").click(function() {
-    $('html, body').animate({
-        scrollTop: $("#favoritesSection").offset().top
-    }, 800);
-});
-
 
  var $loading = $('.preloader').hide()
  

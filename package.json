@@ -2,23 +2,32 @@
   "name": "PurpleFigCheckout",
   "version": "1.0.0",
   "description": "----------",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/danielpolk/Project-1.git"
+    "url": "git+https://github.com/madelyneh/PurpleFigCheckout.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/danielpolk/Project-1/issues"
+    "url": "https://github.com/madelyneh/PurpleFigCheckout/issues"
   },
-  "homepage": "https://github.com/danielpolk/Project-1#readme",
+  "homepage": "https://github.com/madelyneh/PurpleFigCheckout#readme",
   "dependencies": {
+    "body-parser": "^1.18.3",
+    "cookie-parser": "^1.4.4",
+    "express": "^4.16.4",
+    "morgan": "^1.9.1",
     "mysql": "^2.16.0",
-    "node": "^11.4.0"
+    "mysql2": "^1.6.5",
+    "node": "^11.4.0",
+    "passport": "^0.4.0",
+    "passport-jwt": "^4.0.0",
+    "passport-local": "^1.0.0",
+    "sequelize": "^4.43.0"
   }
 }
